@@ -21,9 +21,9 @@
         <h1 id="titulo">FAQs</h1>
       </div>
       <div class="container2" id="ct1">
-        <button class="titulo2">
+        <button class="titulo2" onclick="toggleResposta(this)">
           <h4>What is Frontend Mentor, and how will it help me?</h4>
-          <div class="mais"></div>
+          <div class="icone mais"></div>
         </button>
         <p class="descricao">
           Frontend Mentor offers realistic coding challenges to help developers
@@ -33,9 +33,9 @@
         </p>
       </div>
       <div class="container2" id="ct2">
-        <button class="titulo2">
+        <button class="titulo2" onclick="toggleResposta(this)">
           <h4>Is Frontend Mentor free?</h4>
-          <div class="mais"></div>
+          <div class="icone mais"></div>
         </button>
         <p class="descricao">
           Yes, Frontend Mentor offers both free and premium coding challenges,
@@ -44,9 +44,9 @@
         </p>
       </div>
       <div class="container2" id="ct3">
-        <button class="titulo2">
+        <button class="titulo2" onclick="toggleResposta(this)">
           <h4>Can I use Frontend Mentor projects in my portfolio?</h4>
-          <div class="mais"></div>
+          <div class="icone mais"></div>
         </button>
         <p class="descricao" id="ajuste">
           Yes, you can use projects completed on Frontend Mentor in your
@@ -55,9 +55,9 @@
         </p>
       </div>
       <div class="container2" id="ct4">
-        <button class="titulo2">
+        <button class="titulo2" onclick="toggleResposta(this)">
           <h4>How can I get help if I'm stuck on challenge?</h4>
-          <div class="mais"></div>
+          <div class="icone mais"></div>
         </button>
         <p class="descricao">
           The best place to get help is inside Frontend Mentor's Discord
@@ -66,5 +66,21 @@
         </p>
       </div>
     </div>
+    <script>
+      function toggleResposta(elemento) {
+  const pergunta = elemento.parentElement;
+  const icone = elemento.querySelector('.icone');
+
+  pergunta.classList.toggle('ativa');
+
+  if (pergunta.classList.contains('ativa')) {
+    icone.classList.remove('mais');
+    icone.classList.add('menos');
+  } else {
+    icone.classList.remove('menos');
+    icone.classList.add('mais');
+  }
+}
+    </script>
   </body>
 </html>

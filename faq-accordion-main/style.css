@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -17,12 +17,12 @@ body {
 }
 
 h4 {
-    position: relative;
-    bottom: 2px;
+  position: relative;
+  bottom: 2px;
 }
 
 h4:hover {
-    color: hsl(292, 42%, 14%);
+  color: hsl(292, 42%, 14%);
 }
 
 .faixa-bg {
@@ -35,8 +35,8 @@ h4:hover {
 }
 
 #ajuste {
-    position: relative;
-    top: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .container {
@@ -51,12 +51,12 @@ h4:hover {
   padding-bottom: 10px;
 }
 
-
-.container2{
-    display: grid;
-    grid-template-columns: 425px 30px;
-    grid-template-rows: 50px 50px;
-    margin-bottom: 50px;
+.container2 {
+  display: grid;
+  grid-template-columns: 425px 30px;
+  grid-template-rows: auto auto;
+  margin-bottom: 50px;
+  gap: 10px;
 }
 
 .estrela {
@@ -85,10 +85,10 @@ h4:hover {
 }
 
 .descricao {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-    font-size: 14px;
-    color: hsl(292, 16%, 49%);
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
 }
 
 #ct1 {
@@ -111,34 +111,49 @@ h4:hover {
   padding-left: 20px;
 }
 
-.titulo2{
-display: grid;
-cursor: pointer;
-height: 30px;
-width: 450px;
-border: solid transparent;
-border-radius: 10px;
-background-color: transparent;
-align-items: center;
-justify-items: start;
-grid-template-columns: 1fr 30px 10px;
-padding-inline: 5px;
+.titulo2 {
+  display: grid;
+  cursor: pointer;
+  height: 30px;
+  width: 450px;
+  border: solid transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  align-items: center;
+  justify-items: start;
+  grid-template-columns: 1fr 30px 10px;
+  padding-inline: 5px;
 }
 
-.titulo2:hover {
-    background-color: hsla(0, 0%, 82%, 0.171);
+.container2:hover {
+  background-color: hsla(0, 0%, 82%, 0.171);
 }
 
 .mais {
   background-image: url("assets/images/icon-plus.svg");
-  background-repeat: no-repeat; 
-  background-position: center; 
-  background-size: contain; 
-  width: 30px; 
+}
+
+.menos {
+  background-image: url("assets/images/icon-minus.svg");
+}
+
+.icone {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
   height: 30px;
   grid-column: 2;
   grid-row: 1;
   position: relative;
   bottom: 2px;
   cursor: pointer;
+}
+
+.container2 .descricao {
+  display: none;
+  padding-left: 5px;
+}
+.container2.ativa .descricao {
+  display: block;
 }
